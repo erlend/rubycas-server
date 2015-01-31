@@ -102,7 +102,8 @@ module CASServer
 
     def self.load_config_file(config_file)
       begin
-        config_file = File.open(config_file)
+        config_file = File.read(config_file)
+        config_file = ERB.new(config_file).result
       rescue Errno::ENOENT => e
 
         print_cli_message "Config file #{config_file} does not exist!", :error
