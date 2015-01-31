@@ -34,7 +34,7 @@ $gemspec = Gem::Specification.new do |s|
 
   s.add_development_dependency("rack-test")
   s.add_development_dependency("capybara", '1.1.2')
-  s.add_development_dependency("rspec")
+  s.add_development_dependency("rspec", '< 2.13')
   s.add_development_dependency("rspec-core")
   s.add_development_dependency("rake", "0.8.7")
   s.add_development_dependency("sqlite3", "~> 1.3.1")
